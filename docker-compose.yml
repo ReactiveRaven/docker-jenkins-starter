@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+    jenkins:
+        build: ./
+        expose:
+            - 8080
+            - 50000
+        environment:
+            VIRTUAL_HOST: jenkins.reactiveraven.co.uk,jenkins.reactiveraven.com,jenkins.alliterativeanimals.co.uk,jenkins.alliterativeanimals.com
+            VIRTUAL_PORT: 8080
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+        restart: always
+        network_mode: "bridge"
+
+volumes:
+    jenkinshome:
