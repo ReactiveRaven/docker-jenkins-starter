@@ -9,6 +9,9 @@ services:
         environment:
             VIRTUAL_HOST: jenkins.reactiveraven.co.uk,jenkins.reactiveraven.com,jenkins.alliterativeanimals.co.uk,jenkins.alliterativeanimals.com
             VIRTUAL_PORT: 8080
+        group_add:
+            - 112
+        privileged: True
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
         restart: always
