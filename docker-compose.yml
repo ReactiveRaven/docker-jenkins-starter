@@ -14,8 +14,8 @@ services:
         privileged: True
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
+            - ./jenkins_home:/var/jenkins_home
         restart: always
         network_mode: "bridge"
-
-volumes:
-    jenkinshome:
+        ports:
+            - 50000:50000
