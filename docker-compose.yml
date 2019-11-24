@@ -19,3 +19,4 @@ services:
         network_mode: "bridge"
         ports:
             - 50000:50000
+            - 8080:8080
