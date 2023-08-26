@@ -7,8 +7,10 @@ services:
             - 8080
             - 50000
         environment:
-            VIRTUAL_HOST: jenkins.reactiveraven.co.uk,jenkins.reactiveraven.com,jenkins.alliterativeanimals.co.uk,jenkins.alliterativeanimals.com
+            VIRTUAL_HOST: jenkins.reactiveraven.co.uk
             VIRTUAL_PORT: 8080
+            LETSENCRYPT_HOST: jenkins.reactiveraven.co.uk
+            LETSENCRYPT_EMAIL: davidmatthewgodfrey@gmail.com
         group_add:
             - 112
         privileged: True
